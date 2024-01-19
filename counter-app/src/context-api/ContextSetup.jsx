@@ -6,11 +6,13 @@ import UserContextProvider from './UserContextProvider'
 
 function ContextSetup() {
   return (
-      <>
-          <UserContextProvider>
-              <Login />
-              <Profile/>
-      </UserContextProvider>
+    <>
+      
+<UserContextProvider>
+ <Login />
+ <Profile/>
+  </UserContextProvider>
+
     </>
   )
 }
