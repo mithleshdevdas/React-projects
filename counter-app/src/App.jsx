@@ -17,6 +17,7 @@ import Login from "./context-api/Login";
 import Profile from "./context-api/Profile";
 import ContextSetup from "./context-api/ContextSetup";
 import Setup from "./Themeswicher/Setup";
+import SetupTodo from "./Todo/SetupTodo";
 
 
 
@@ -28,7 +29,7 @@ import Setup from "./Themeswicher/Setup";
 function App() {
   return (
  <>
-<Setup/>
+<SetupTodo/>
  </>
   
 
