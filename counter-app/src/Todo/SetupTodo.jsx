@@ -31,7 +31,7 @@ function SetupTodo() {
     if (todos && todos.length > 0) {
       settodos(todos);
     }
-  }, []);
+  }, [])
 
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(todos));
@@ -63,4 +63,5 @@ function SetupTodo() {
 
 export default SetupTodo;
 
+// 
 // 
