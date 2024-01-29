@@ -19,8 +19,11 @@ import ContextSetup from "./context-api/ContextSetup";
 import Setup from "./Themeswicher/Setup";
 import SetupTodo from "./Todo/SetupTodo";
 
+import AddTodo from "./Redux-tookit/AddTodo";
 
-
+import { Provider } from "react-redux";
+import { store } from "./Redux-tookit/store";
+import Todos from "./Redux-tookit/Todos";
 
 
 
@@ -28,9 +31,10 @@ import SetupTodo from "./Todo/SetupTodo";
 
 function App() {
   return (
- <>
-<SetupTodo/>
- </>
+ <Provider store={store}>
+      <AddTodo />
+      <Todos/>
+ </Provider>
   
 
   )
