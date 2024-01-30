@@ -19,12 +19,15 @@ import ContextSetup from "./context-api/ContextSetup";
 import Setup from "./Themeswicher/Setup";
 import SetupTodo from "./Todo/SetupTodo";
 
-import AddTodo from "./Redux-tookit/AddTodo";
+import AddTodo from './todoo/Addtodo';
 
 import { Provider } from "react-redux";
-import { store } from "./Redux-tookit/store";
-import Todos from "./Redux-tookit/Todos";
 
+import Todos from './todoo/Todos';
+
+import Todoss from "./tototo/Todoss";
+import Add from "./tototo/Add";
+import {store} from './tototo/store'
 
 
 
@@ -32,8 +35,8 @@ import Todos from "./Redux-tookit/Todos";
 function App() {
   return (
  <Provider store={store}>
-      <AddTodo />
-      <Todos/>
+      <Add/>
+      <Todoss/>
  </Provider>
   
 
