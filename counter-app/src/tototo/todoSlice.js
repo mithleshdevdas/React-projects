@@ -18,6 +18,7 @@ export const todoSlice = createSlice({
                 id: nanoid(),
                 text: action.payload
             }
+            // @ts-ignore
             state.todos.push(todo)
         },
         removetodo: (state, action) => {
