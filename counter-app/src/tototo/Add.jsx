@@ -15,6 +15,7 @@ function Add() {
         <>
             <form onSubmit={ addtodohandler }>
                 <input type="text"
+                    placeholder='enter todo'
                     value={ input }
                     onChange={(e)=> setinput(e.target.value)}
 
