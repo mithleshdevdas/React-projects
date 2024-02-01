@@ -17,12 +17,11 @@ export default function ThemeBtn() {
       
           
       <label>
-                <input
-                    type="checkbox"
-                    value=""
-                    checked={ themeMode === 'dark' }
-                    onChange={onChangeBtn}
-                /> <span>toggle thme</span>   
+<input
+ type="checkbox"
+ checked={ themeMode === 'dark' }
+ onChange={onChangeBtn}
+/> <span>toggle thme</span>   
       </label>
       </>
   );
