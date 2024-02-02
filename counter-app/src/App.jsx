@@ -1,13 +1,11 @@
+// @ts-nocheck
 import React from 'react'
-import Counter from './counter-project/Counter'
-import PasswordGentor from './pass-project/PasswordGentor'
-import Layout from './reactrouterdom/Layout'
-import Result from './reactrouterdom/Result'
 
 function App() {
+  console.log(import.meta.env.VITE_APPWRITE_URL);
   return (
     <>
-<Result/>
+      <h1>hello</h1>
     </>
   )
 }
