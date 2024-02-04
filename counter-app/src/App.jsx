@@ -2,9 +2,9 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 
-import authService from './blog-project/appwrite/auth'
-import authSlice, { login, logout } from './blog-project/store/authSlice'
-import { Footer, Header } from './blog-project/componets'
+import authService from './blog/appwrite/auth'
+import authSlice, { login, logout } from './blog/store/authSlice'
+import { Footer, Header } from './blog/components'
 import {Outlet} from 'react-router-dom'
 
 function App() {
