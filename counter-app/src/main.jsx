@@ -5,14 +5,16 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 import { Provider } from 'react-redux'
-import store from './blog-project/store/store.js'
+import store from './blog/store/store.js'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import Home from './blog-project/pages/Home.jsx'
-import { AuthLayout, Login, SignUp } from './blog-project/componets/index.js'
-import AllPost from './blog-project/pages/AllPost.jsx'
-import AddPost from './blog-project/pages/AddPost.jsx'
-import EditPost from './blog-project/pages/EditPost.jsx'
-import Post from './blog-project/pages/Post.jsx'
+import Home from './blog/pages/Home.jsx'
+import { AuthLayout, Login } from './blog/components/index.js'
+import AllPost from './blog/pages/AllPosts.jsx'
+import AddPost from './blog/pages/AddPost.jsx'
+import EditPost from './blog/pages/EditPost.jsx'
+import Post from './blog/pages/Post.jsx'
+
+import SignUp from './blog/pages/Signup.jsx'
 
 
 
