@@ -1,40 +1,16 @@
-// @ts-nocheck
-import React, { useEffect, useState } from 'react'
-import { useDispatch } from 'react-redux'
+import React from 'react'
+import Cards from './card-props/Cards'
 
-import authService from './blog/appwrite/auth'
-import authSlice, { login, logout } from './blog/store/authSlice'
-import { Footer, Header } from './blog/components'
-import {Outlet} from 'react-router-dom'
+
 
 function App() {
-  const [loading, setLoading] = useState(true)
-
-  const dispatch = useDispatch()
-
-  useEffect(() => {
-    authService.getCurrentUser()
-      .then((userData) => {
-        if (userData) {
-        dispatch(login({userData}))
-        } else {
-          dispatch(logout())
-      }
-      })
-    .finally(()=> setLoading(false))
-
-  },[])
-
-  return !loading ? <div className='bg-green-300 min-h-screen '>
-    <div className='w-full block'>
-      <Header />
-      <main>
- <Outlet/>
-        todo 
-      </main>
-      <Footer/>
-  </div>
-  </div> : (null)
+  return (
+    <>
+     <Cards name='mithlesh' btn='visit hrere'/>
+     <Cards name='devdas' btn='explore'/>
+     <Cards name='kumar' btn='click me'/>
+    </>
+  )
 }
 
 export default App
