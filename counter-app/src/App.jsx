@@ -1,15 +1,20 @@
-import React from 'react'
-import Cards from './card-props/Cards'
+import React  from 'react'
+import Counter from './counter-project/Counter'
+
+
+
+
+
 
 
 
 function App() {
   return (
+ 
     <>
-     <Cards name='mithlesh' btn='visit hrere'/>
-     <Cards name='devdas' btn='explore'/>
-     <Cards name='kumar' btn='click me'/>
-    </>
+   <Counter/>
+</>
+
   )
 }
 
