@@ -9,7 +9,7 @@ function Login() {
     const {setuser} = useContext(UserContext)
 
     const handlesubmit = (e) => {
-        e.preventDefault()
+        e.preventDefault();
         setuser({username,password})
         
     }
