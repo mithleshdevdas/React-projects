@@ -1,6 +1,11 @@
 import React  from 'react'
+import Cards from './card-project/Cards'
+import ContextSetup from './contexxt/ContextSetup'
 import Counter from './counter-project/Counter'
-import Final from './currency/Final'
+
+
+
+
 
 
 
@@ -13,9 +18,10 @@ function App() {
   return (
  
     <>
-   <Final/>
+      <Cards name={ 'mk' } btn={ 'f' } />
+      <ContextSetup />
+      <Counter/>
 </>
-
   )
 }
 
