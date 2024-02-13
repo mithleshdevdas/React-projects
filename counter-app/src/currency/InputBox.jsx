@@ -1,4 +1,4 @@
-import React, { useId } from "react";
+import React, { useId } from 'react'
 
 function InputBox({
   label,
@@ -6,37 +6,41 @@ function InputBox({
   onAmountchange,
   onCurrencyChange,
   currencyOption = [],
-  selectCurrency = "usd",
-  
-  amountDisable = false,
-  currencyDisable = false,
+  selecCurrency = 'usd',
+  amountDisable,
+  currencyDisable
 }) {
-  const amountId = useId();
+  const amountInputId = useId()
+  
   return (
     <>
       <div className="main">
         <div className="label">
-          <label htmlFor={amountId}>{label}</label>
+          <label htmlFor={ amountInputId }>{ label }</label>
           <input
-            id={amountId}
+            id={amountInputId}
             type="number"
-            placeholder="amount"
-            disabled={amountDisable}
-            value={amount}
-            onChange={(e) =>
-              onAmountchange && onAmountchange(Number(e.target.value))
-            }
+            placeholder='amount'
+            disabled={ amountDisable }
+            value={ amount }
+            onChange={(e)=> onAmountchange && onAmountchange (Number(e.target.value))}
+
+
           />
         </div>
-        <div className="types">
-          <p>currency types</p>
+        <div className="type">
+          <p>currency type</p>
           <select
-            value={selectCurrency}
-            onChange={(e) => onCurrencyChange && onAmountchange(e.target.value)}
+            value={ selecCurrency }
+            onChange={ (e) => onCurrencyChange && onCurrencyChange(e.target.value) }
             disabled={currencyDisable}
           >
-            {currencyOption.map((currency) => (
-              <option key={currency} value={currency}>
+            { currencyOption.map((currency) => (
+              <option
+                key={ currency }
+                value={currency}
+              
+              >
                 {currency}
               </option>
             ))}
@@ -44,7 +48,7 @@ function InputBox({
         </div>
       </div>
     </>
-  );
+  )
 }
 
-export default InputBox;
+export default InputBox
