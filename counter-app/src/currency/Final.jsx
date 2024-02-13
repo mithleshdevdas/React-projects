@@ -4,12 +4,12 @@ import InputBox from "./InputBox";
 
 function Final() {
   const [amount, setamount] = useState(0);
-
   const [from, setfrom] = useState("usd");
   const [to, setto] = useState("inr");
   const [convertamout, setconvertamount] = useState(0);
+
   const currencyinfo = useCurrencyinfo(from);
-  const options = Object.keys('');
+  const options = Object.keys(currencyinfo);
 
   const swap = () => {
     setfrom(to);
@@ -20,6 +20,7 @@ function Final() {
   const convert = () => {
     setconvertamount(amount * currencyinfo[to]);
   };
+
   return (
     <>
       <div className="main">
@@ -31,9 +32,9 @@ function Final() {
           >
             <div className="inputbox">
               <InputBox
-                label="from"
+                label="From"
                 amount={amount}
-                currencyOption={options}
+                currrencyOption={options}
                 onCurrencyChange={(currency) => setamount(amount)}
                 selectCurrency={from}
                 onAmountchange={(amount) => setamount(amount)}
@@ -46,7 +47,7 @@ function Final() {
               <InputBox
                 label="to"
                 amount={convertamout}
-                currencyOption={options}
+                currrencyOption={options}
                 onCurrencyChange={(currency) => setto(currency)}
                 selectCurrency={from}
                 onAmountchange={(amount) => setamount(amount)}
@@ -63,3 +64,5 @@ function Final() {
 }
 
 export default Final;
+
+//
